@@ -1,2 +1,1 @@
-# Warehouse-Management-Database
-Proyecto de base de datos relacional
+Warehouse Management Database es un proyecto de base de datos relacional diseñado para centralizar la gestión de productos, clientes, proveedores, facturas e inventario. Además, ayudar al cliente mostrando los productos disponibles en el almacén y de esta forma él no tiene que adivinar el precio de cada producto al momento
