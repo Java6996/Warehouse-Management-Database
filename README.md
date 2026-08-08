@@ -1,1 +1,2 @@
 Warehouse Management Database es un proyecto de base de datos relacional diseñado para centralizar la gestión de productos, clientes, proveedores, facturas e inventario. Además, ayudar al cliente mostrando los productos disponibles en el almacén y de esta forma él no tiene que adivinar el precio de cada producto al momento
+El proyecto también incorpora características avanzadas de MySQL, tales como stored procedures, functions, triggers, cursors, handlers y transactions, para automatizar procesos empresariales y mantener la coherencia de los datos. 
