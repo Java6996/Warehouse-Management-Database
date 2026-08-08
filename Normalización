@@ -1,0 +1,63 @@
+Durante el diseño de la base de datos se aplicó el proceso de normalización con el objetivo de minimizar la redundancia de información, evitar anomalías de inserción, actualización y eliminación, y garantizar la integridad de los datos.
+
+El modelo fue diseñado siguiendo los principios de la Tercera Forma Normal (3FN), asegurando que cada entidad represente un único concepto del dominio del negocio y que las relaciones entre ellas se establezcan mediante claves primarias y foráneas.
+
+## Primera Forma Normal (1FN)
+
+Se verificó que todas las tablas cumplieran con los siguientes criterios:
+
+- Cada atributo contiene valores atómicos.
+- No existen grupos repetitivos de columnas.
+- Cada registro puede identificarse mediante una clave primaria.
+
+Ejemplo:
+
+- Cada producto se almacena como un único registro.
+- Cada detalle de venta representa un solo producto vendido.
+- Los datos de clientes, proveedores y usuarios se almacenan en entidades independientes.
+
+
+## Segunda Forma Normal (2FN)
+
+Se eliminaron las dependencias parciales de atributos respecto de claves compuestas.
+
+Para ello:
+
+- La información de productos se separó de las operaciones de venta.
+- Los datos de clientes se almacenan únicamente en la entidad correspondiente.
+- Las entidades transaccionales (ventas, compras, facturas, etc.) hacen referencia a dichas entidades mediante claves foráneas.
+
+Esta separación evita duplicación de información y facilita el mantenimiento de los datos.
+
+## Tercera Forma Normal (3FN)
+
+Se eliminaron las dependencias transitivas, asegurando que todos los atributos dependan únicamente de la clave primaria de su entidad.
+
+Por ejemplo:
+
+- La información de proveedores no se almacena dentro de la tabla de productos.
+- La información de categorías se mantiene en su propia entidad.
+- Los datos de sucursales, empleados y clientes se encuentran normalizados en tablas independientes.
+
+Este diseño mejora la consistencia de la información y simplifica futuras modificaciones del esquema.
+
+## Beneficios obtenidos
+
+La aplicación del proceso de normalización permitió:
+
+- Reducir la redundancia de datos.
+- Evitar inconsistencias durante las operaciones de inserción y actualización.
+- Mantener la integridad referencial mediante claves foráneas.
+- Facilitar la escalabilidad del modelo de datos.
+- Simplificar las consultas y el mantenimiento de la base de datos.
+
+
+## Relación con la lógica de negocio
+
+Una vez normalizado el modelo de datos, la lógica de negocio se implementó mediante funcionalidades propias de MySQL, entre ellas:
+
+- Procedimientos almacenados para automatizar operaciones frecuentes.
+- Funciones para encapsular cálculos reutilizables.
+- Triggers para mantener la integridad y registrar eventos automáticamente.
+- Transacciones para garantizar la consistencia durante operaciones críticas.
+- Cursores y handlers para el procesamiento controlado de conjuntos de datos.
