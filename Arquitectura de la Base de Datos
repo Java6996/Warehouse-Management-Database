@@ -1,0 +1,23 @@
+## Modelo
+
+La base de datos fue diseñada siguiendo un modelo relacional normalizado.
+
+## Integridad
+
+Se utilizaron claves primarias y foráneas para garantizar la integridad referencial.
+
+## Relaciones
+
+- 1:N
+- N:M mediante tablas intermedias/pivote
+
+## Automatización
+
+La lógica de negocio se implementó utilizando:
+
+- Procedimientos almacenados
+- Funciones
+- Triggers
+- Transacciones
+- Cursores
+- Handlers
